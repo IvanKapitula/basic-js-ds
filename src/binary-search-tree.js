@@ -62,9 +62,9 @@ class BinarySearchTree {
     if (node === null) { 
     return null; 
     } else if (data < node.data) { 
-    return this.search(data, node.left); 
+    return this.find(data, node.left); 
     } else if (data > node.data) { 
-    return this.search(data, node.right); 
+    return this.find(data, node.right); 
     } else { 
     return node; 
     } 
@@ -107,7 +107,7 @@ class BinarySearchTree {
   
   min(node = this.value) { 
   if(node.left === null){
-    return node;
+    return node.data;
   }else{
     return this.min(node.left);
   }
@@ -115,7 +115,7 @@ class BinarySearchTree {
   
   max(node = this.value) { 
     if(node.right === null){
-      return node;
+      return node.data;
     }else{
       return this.max(node.right);
     }
