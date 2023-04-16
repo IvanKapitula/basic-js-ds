@@ -97,8 +97,8 @@ class BinarySearchTree {
       return node; 
       } 
       let newNode = this.min(node.right); 
-      node.data = newNode.data; 
-      node.right = this.removeNode(node.right, newNode.data); 
+      node.data = newNode; 
+      node.right = this.removeNode(node.right, newNode); 
       return node; 
       } 
       }
